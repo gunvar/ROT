@@ -1,1 +1,19 @@
-{"projects":[],"risks":[],"actions":[],"users":{"admin":{"password_hash":"240be518fabd2724ddb6f04eeb9d5b059f8f3f3d3a7d6a2e7c8f9b0a1c2d3e4f","role":"admin","name":"Administrator","projects":[]}}}
+{
+  "projects": [],
+  "risks": [],
+  "actions": [],
+  "users": {
+    "admin": {
+      "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "admin",
+      "name": "Administrator",
+      "projects": []
+    },
+    "Gunvar": {
+      "password_hash": "d9cd9748f429bdf9d06b6c448d39b9a35c1b9bf06fb39dcb7ebefb3761b74357",
+      "role": "admin",
+      "name": "Gunvar",
+      "projects": []
+    }
+  }
+}
