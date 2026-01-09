@@ -1,7 +1,593 @@
 {
-  "projects": [],
-  "risks": [],
-  "actions": [],
+  "projects": [
+    {
+      "id": "proj001",
+      "number": "5234567",
+      "name": "E39 Rogfast - Geoteknikk",
+      "value": 8.5,
+      "ol": "Kari Nordmann",
+      "created": "2025-09-15T08:00:00"
+    },
+    {
+      "id": "proj002",
+      "number": "5234890",
+      "name": "Stavanger Havn - Miljøkartlegging",
+      "value": 2.1,
+      "ol": "Ole Hansen",
+      "created": "2025-10-01T08:00:00"
+    },
+    {
+      "id": "proj003",
+      "number": "5235123",
+      "name": "Haugaland Næringspark - Reguleringsplan",
+      "value": 4.2,
+      "ol": "Gunvar",
+      "created": "2025-08-20T08:00:00"
+    },
+    {
+      "id": "proj004",
+      "number": "5235456",
+      "name": "Karmøy Kommune - VA-rammeplan",
+      "value": 1.8,
+      "ol": "Lise Berg",
+      "created": "2025-11-01T08:00:00"
+    },
+    {
+      "id": "proj005",
+      "number": "5235789",
+      "name": "Equinor Mongstad - Grunnundersøkelser",
+      "value": 12.5,
+      "ol": "Erik Stein",
+      "created": "2025-07-01T08:00:00"
+    },
+    {
+      "id": "proj006",
+      "number": "5236012",
+      "name": "Haugesund Sentrum - Byromsanalyse",
+      "value": 0.9,
+      "ol": "Maria Fjell",
+      "created": "2025-12-01T08:00:00"
+    }
+  ],
+  "risks": [
+    {
+      "id": "risk001",
+      "project_id": "proj001",
+      "title": "Uforutsette grunnforhold i tunnel",
+      "description": "Risiko for å treffe på svakhetssoner eller vannførende sprekker som ikke er kartlagt i forundersøkelsene. Kan medføre behov for ekstra sikringstiltak og forsinkelser.",
+      "type": "Risiko",
+      "owner": "Firma",
+      "tags": ["Teknisk", "Økonomi"],
+      "probability": 4,
+      "consequence": 5,
+      "exposure": 3500000,
+      "status": "Aktiv",
+      "created": "2025-09-20T10:00:00",
+      "last_updated": "2026-01-05T14:30:00",
+      "created_by": "admin",
+      "discovery_method": "Pre-Mortem",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-09-20T10:00:00", "score": 20, "probability": 4, "consequence": 5},
+        {"date": "2025-11-15T09:00:00", "score": 20, "probability": 4, "consequence": 5},
+        {"date": "2026-01-05T14:30:00", "score": 20, "probability": 4, "consequence": 5}
+      ]
+    },
+    {
+      "id": "risk002",
+      "project_id": "proj001",
+      "title": "Nøkkelperson slutter",
+      "description": "Senioringeniør med spesialkompetanse på fjellsikring har varslet mulig jobbskifte. Vanskelig å erstatte kompetansen på kort varsel.",
+      "type": "Risiko",
+      "owner": "Firma",
+      "tags": ["Ressurs"],
+      "probability": 3,
+      "consequence": 4,
+      "exposure": 800000,
+      "status": "Aktiv",
+      "created": "2025-10-10T11:00:00",
+      "last_updated": "2025-12-01T09:00:00",
+      "created_by": "admin",
+      "discovery_method": "De 5 skarpe spørsmålene",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-10-10T11:00:00", "score": 12, "probability": 3, "consequence": 4}
+      ]
+    },
+    {
+      "id": "risk003",
+      "project_id": "proj001",
+      "title": "Automatisert rapportgenerering",
+      "description": "Mulighet for å utvikle KI-basert automatisering av geotekniske standardrapporter. Kan spare 40% tid på dokumentasjon.",
+      "type": "Mulighet",
+      "owner": "Firma",
+      "tags": ["Teknisk", "Økonomi"],
+      "probability": 4,
+      "consequence": 4,
+      "exposure": 500000,
+      "status": "Aktiv",
+      "created": "2025-11-01T13:00:00",
+      "last_updated": "2026-01-02T10:00:00",
+      "created_by": "admin",
+      "discovery_method": "Digitaliserings-radar",
+      "is_digital": true,
+      "score_history": [
+        {"date": "2025-11-01T13:00:00", "score": 16, "probability": 4, "consequence": 4}
+      ]
+    },
+    {
+      "id": "risk004",
+      "project_id": "proj002",
+      "title": "Forsinket datalevering fra kunde",
+      "description": "Havnevesenet har ikke levert historiske miljødata som avtalt. Forsinker oppstart av feltarbeid med minimum 3 uker.",
+      "type": "Risiko",
+      "owner": "Kunde",
+      "tags": ["Fremdrift"],
+      "probability": 5,
+      "consequence": 3,
+      "exposure": 150000,
+      "status": "Aktiv",
+      "created": "2025-10-15T09:00:00",
+      "last_updated": "2025-10-15T09:00:00",
+      "created_by": "admin",
+      "discovery_method": "Mentorprat (generell)",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-10-15T09:00:00", "score": 15, "probability": 5, "consequence": 3}
+      ]
+    },
+    {
+      "id": "risk005",
+      "project_id": "proj002",
+      "title": "Funn av forurensning utover forventet",
+      "description": "Risiko for å finne mer omfattende forurensning enn antatt i tilbudet. Kan kreve utvidet prøvetaking og analyse.",
+      "type": "Risiko",
+      "owner": "Kunde",
+      "tags": ["Teknisk", "Økonomi"],
+      "probability": 3,
+      "consequence": 3,
+      "exposure": 200000,
+      "status": "Aktiv",
+      "created": "2025-10-20T14:00:00",
+      "last_updated": "2025-12-10T11:00:00",
+      "created_by": "admin",
+      "discovery_method": "Leveransesjekkpunkter",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-10-20T14:00:00", "score": 9, "probability": 3, "consequence": 3}
+      ]
+    },
+    {
+      "id": "risk006",
+      "project_id": "proj003",
+      "title": "Innsigelse fra Statsforvalter",
+      "description": "Høy sannsynlighet for innsigelse på grunn av nærhet til naturreservat. Kan forsinke hele reguleringsplanen med 6-12 måneder.",
+      "type": "Risiko",
+      "owner": "Kunde",
+      "tags": ["Juridisk", "Fremdrift"],
+      "probability": 4,
+      "consequence": 4,
+      "exposure": 600000,
+      "status": "Aktiv",
+      "created": "2025-08-25T10:00:00",
+      "last_updated": "2026-01-03T15:00:00",
+      "created_by": "Gunvar",
+      "discovery_method": "Pre-Mortem",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-08-25T10:00:00", "score": 16, "probability": 4, "consequence": 4}
+      ]
+    },
+    {
+      "id": "risk007",
+      "project_id": "proj003",
+      "title": "Utvidet oppdrag - infrastrukturvurdering",
+      "description": "Kunde har signalisert interesse for tilleggsoppdrag på infrastrukturvurdering. Estimert tilleggsverdi 1.5 MNOK.",
+      "type": "Mulighet",
+      "owner": "Firma",
+      "tags": ["Økonomi"],
+      "probability": 3,
+      "consequence": 4,
+      "exposure": 1500000,
+      "status": "Aktiv",
+      "created": "2025-09-10T11:00:00",
+      "last_updated": "2025-12-20T09:00:00",
+      "created_by": "Gunvar",
+      "discovery_method": "Mentorprat (generell)",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-09-10T11:00:00", "score": 12, "probability": 3, "consequence": 4}
+      ]
+    },
+    {
+      "id": "risk008",
+      "project_id": "proj003",
+      "title": "3D-visualisering med KI",
+      "description": "Mulighet for å bruke KI-verktøy til å generere realistiske 3D-visualiseringer av planområdet. Kan øke kvalitet og redusere tidsbruk.",
+      "type": "Mulighet",
+      "owner": "Firma",
+      "tags": ["Teknisk", "Kvalitet"],
+      "probability": 4,
+      "consequence": 3,
+      "exposure": 100000,
+      "status": "Aktiv",
+      "created": "2025-10-05T13:00:00",
+      "last_updated": "2025-12-15T10:00:00",
+      "created_by": "Gunvar",
+      "discovery_method": "Digitaliserings-radar",
+      "is_digital": true,
+      "score_history": [
+        {"date": "2025-10-05T13:00:00", "score": 12, "probability": 4, "consequence": 3}
+      ]
+    },
+    {
+      "id": "risk009",
+      "project_id": "proj004",
+      "title": "Mangelfull ledningsdokumentasjon",
+      "description": "Kommunens VA-kart er utdatert. Risiko for feil i analyser basert på unøyaktig grunnlagsdata.",
+      "type": "Risiko",
+      "owner": "Kunde",
+      "tags": ["Teknisk", "Kvalitet"],
+      "probability": 4,
+      "consequence": 3,
+      "exposure": 120000,
+      "status": "Aktiv",
+      "created": "2025-11-10T09:00:00",
+      "last_updated": "2025-11-10T09:00:00",
+      "created_by": "admin",
+      "discovery_method": "Leveransesjekkpunkter",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-11-10T09:00:00", "score": 12, "probability": 4, "consequence": 3}
+      ]
+    },
+    {
+      "id": "risk010",
+      "project_id": "proj004",
+      "title": "Underestimert tidsbruk i tilbud",
+      "description": "Tilbudet ble levert under tidspress. Mistanke om at enkelte fagområder er underestimert med 20-30%.",
+      "type": "Risiko",
+      "owner": "Firma",
+      "tags": ["Økonomi", "Ressurs"],
+      "probability": 3,
+      "consequence": 4,
+      "exposure": 180000,
+      "status": "Aktiv",
+      "created": "2025-11-05T14:00:00",
+      "last_updated": "2025-12-01T11:00:00",
+      "created_by": "admin",
+      "discovery_method": "De 5 skarpe spørsmålene",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-11-05T14:00:00", "score": 12, "probability": 3, "consequence": 4}
+      ]
+    },
+    {
+      "id": "risk011",
+      "project_id": "proj005",
+      "title": "HMS-hendelse ved feltarbeid",
+      "description": "Arbeid på aktivt industriområde med strenge HMS-krav. Risiko for hendelser som stopper arbeidet.",
+      "type": "Risiko",
+      "owner": "Firma",
+      "tags": ["HMS"],
+      "probability": 2,
+      "consequence": 5,
+      "exposure": 500000,
+      "status": "Aktiv",
+      "created": "2025-07-10T08:00:00",
+      "last_updated": "2025-12-20T14:00:00",
+      "created_by": "admin",
+      "discovery_method": "Pre-Mortem",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-07-10T08:00:00", "score": 15, "probability": 3, "consequence": 5},
+        {"date": "2025-10-01T09:00:00", "score": 10, "probability": 2, "consequence": 5}
+      ]
+    },
+    {
+      "id": "risk012",
+      "project_id": "proj005",
+      "title": "Valutarisiko på utstyrleie",
+      "description": "Spesialutstyr leies fra Danmark. Svak NOK kan øke kostnadene betydelig.",
+      "type": "Risiko",
+      "owner": "Firma",
+      "tags": ["Økonomi"],
+      "probability": 3,
+      "consequence": 2,
+      "exposure": 75000,
+      "status": "Mitigert",
+      "created": "2025-07-15T10:00:00",
+      "last_updated": "2025-09-01T11:00:00",
+      "created_by": "admin",
+      "discovery_method": "Egenidentifisert",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-07-15T10:00:00", "score": 6, "probability": 3, "consequence": 2}
+      ]
+    },
+    {
+      "id": "risk013",
+      "project_id": "proj005",
+      "title": "Rammeavtale-forlengelse",
+      "description": "Equinor vurderer å forlenge rammeavtalen med 2 år. Vil sikre langsiktig inntekt for avdelingen.",
+      "type": "Mulighet",
+      "owner": "Firma",
+      "tags": ["Økonomi"],
+      "probability": 3,
+      "consequence": 5,
+      "exposure": 5000000,
+      "status": "Aktiv",
+      "created": "2025-08-01T09:00:00",
+      "last_updated": "2026-01-02T08:00:00",
+      "created_by": "admin",
+      "discovery_method": "Mentorprat (generell)",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-08-01T09:00:00", "score": 15, "probability": 3, "consequence": 5}
+      ]
+    },
+    {
+      "id": "risk014",
+      "project_id": "proj005",
+      "title": "Automatisert labdatabehandling",
+      "description": "Mulighet for å automatisere import og kvalitetskontroll av labdata fra underleverandør. Kan spare 2 dagsverk per måned.",
+      "type": "Mulighet",
+      "owner": "Firma",
+      "tags": ["Teknisk", "Ressurs"],
+      "probability": 5,
+      "consequence": 3,
+      "exposure": 200000,
+      "status": "Aktiv",
+      "created": "2025-09-15T14:00:00",
+      "last_updated": "2025-12-10T09:00:00",
+      "created_by": "admin",
+      "discovery_method": "Elon Musks Algoritme",
+      "is_digital": true,
+      "score_history": [
+        {"date": "2025-09-15T14:00:00", "score": 15, "probability": 5, "consequence": 3}
+      ]
+    },
+    {
+      "id": "risk015",
+      "project_id": "proj006",
+      "title": "Politisk uenighet om anbefalinger",
+      "description": "Analysen kan gi anbefalinger som er politisk kontroversielle. Risiko for at rapporten blir skrinlagt.",
+      "type": "Risiko",
+      "owner": "Kunde",
+      "tags": ["Juridisk"],
+      "probability": 3,
+      "consequence": 2,
+      "exposure": 50000,
+      "status": "Aktiv",
+      "created": "2025-12-05T10:00:00",
+      "last_updated": "2025-12-05T10:00:00",
+      "created_by": "admin",
+      "discovery_method": "De 5 skarpe spørsmålene",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-12-05T10:00:00", "score": 6, "probability": 3, "consequence": 2}
+      ]
+    },
+    {
+      "id": "risk016",
+      "project_id": "proj006",
+      "title": "Medvirkningsprosess gir merverdi",
+      "description": "God medvirkning kan gi positiv omtale og føre til flere oppdrag fra kommunen.",
+      "type": "Mulighet",
+      "owner": "Firma",
+      "tags": ["Økonomi", "Kvalitet"],
+      "probability": 4,
+      "consequence": 3,
+      "exposure": 300000,
+      "status": "Aktiv",
+      "created": "2025-12-10T11:00:00",
+      "last_updated": "2026-01-05T09:00:00",
+      "created_by": "admin",
+      "discovery_method": "Mentorprat (generell)",
+      "is_digital": false,
+      "score_history": [
+        {"date": "2025-12-10T11:00:00", "score": 12, "probability": 4, "consequence": 3}
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "act001",
+      "risk_id": "risk001",
+      "description": "Bestille utvidet seismisk undersøkelse i kritiske soner",
+      "responsible": "Erik Stein",
+      "deadline": "2026-01-20",
+      "status": "Åpen",
+      "created": "2025-09-25T10:00:00"
+    },
+    {
+      "id": "act002",
+      "risk_id": "risk001",
+      "description": "Etablere beredskapsplan for uforutsette grunnforhold",
+      "responsible": "Kari Nordmann",
+      "deadline": "2026-01-15",
+      "status": "Gjennomført",
+      "created": "2025-09-25T10:30:00",
+      "completed_date": "2026-01-03T14:00:00"
+    },
+    {
+      "id": "act003",
+      "risk_id": "risk002",
+      "description": "Gjennomføre kompetanseoverføring til junior",
+      "responsible": "Kari Nordmann",
+      "deadline": "2026-02-01",
+      "status": "Åpen",
+      "created": "2025-10-15T09:00:00"
+    },
+    {
+      "id": "act004",
+      "risk_id": "risk002",
+      "description": "Dokumentere spesialkompetanse i fagwiki",
+      "responsible": "Per Fjell",
+      "deadline": "2026-01-25",
+      "status": "Åpen",
+      "created": "2025-10-15T09:30:00"
+    },
+    {
+      "id": "act005",
+      "risk_id": "risk003",
+      "description": "Lage pilot for automatisk rapportmal",
+      "responsible": "Gunvar",
+      "deadline": "2026-02-15",
+      "status": "Åpen",
+      "created": "2025-11-05T10:00:00"
+    },
+    {
+      "id": "act006",
+      "risk_id": "risk004",
+      "description": "Sende purring til havnevesenet med frist",
+      "responsible": "Ole Hansen",
+      "deadline": "2025-12-01",
+      "status": "Gjennomført",
+      "created": "2025-10-20T08:00:00",
+      "completed_date": "2025-11-28T10:00:00"
+    },
+    {
+      "id": "act007",
+      "risk_id": "risk004",
+      "description": "Varsle kunde om mulig forsinkelse og kostnadskonsekvens",
+      "responsible": "Ole Hansen",
+      "deadline": "2026-01-10",
+      "status": "Åpen",
+      "created": "2025-12-15T14:00:00"
+    },
+    {
+      "id": "act008",
+      "risk_id": "risk006",
+      "description": "Avholde dialogmøte med Statsforvalter",
+      "responsible": "Gunvar",
+      "deadline": "2026-01-30",
+      "status": "Åpen",
+      "created": "2025-08-30T09:00:00"
+    },
+    {
+      "id": "act009",
+      "risk_id": "risk006",
+      "description": "Utarbeide alternativ plassering utenfor buffersone",
+      "responsible": "Maria Fjell",
+      "deadline": "2026-02-15",
+      "status": "Åpen",
+      "created": "2025-09-05T11:00:00"
+    },
+    {
+      "id": "act010",
+      "risk_id": "risk007",
+      "description": "Sende uforpliktende tilbud på tilleggsoppdrag",
+      "responsible": "Gunvar",
+      "deadline": "2026-01-15",
+      "status": "Åpen",
+      "created": "2025-09-15T10:00:00"
+    },
+    {
+      "id": "act011",
+      "risk_id": "risk008",
+      "description": "Teste KI-verktøy for 3D-visualisering på delområde",
+      "responsible": "Gunvar",
+      "deadline": "2026-01-20",
+      "status": "Åpen",
+      "created": "2025-10-10T09:00:00"
+    },
+    {
+      "id": "act012",
+      "risk_id": "risk009",
+      "description": "Bestille oppdatert ledningskart fra Geomatikk",
+      "responsible": "Lise Berg",
+      "deadline": "2025-12-15",
+      "status": "Gjennomført",
+      "created": "2025-11-12T10:00:00",
+      "completed_date": "2025-12-10T14:00:00"
+    },
+    {
+      "id": "act013",
+      "risk_id": "risk010",
+      "description": "Gjennomgå tilbud og identifisere underestimerte poster",
+      "responsible": "Lise Berg",
+      "deadline": "2025-12-01",
+      "status": "Gjennomført",
+      "created": "2025-11-08T09:00:00",
+      "completed_date": "2025-11-29T15:00:00"
+    },
+    {
+      "id": "act014",
+      "risk_id": "risk010",
+      "description": "Fremme VEM for merkostnader til kunde",
+      "responsible": "Lise Berg",
+      "deadline": "2026-01-15",
+      "status": "Åpen",
+      "created": "2025-12-01T10:00:00"
+    },
+    {
+      "id": "act015",
+      "risk_id": "risk011",
+      "description": "Gjennomføre HMS-kurs for alle feltpersonell",
+      "responsible": "Erik Stein",
+      "deadline": "2025-08-01",
+      "status": "Gjennomført",
+      "created": "2025-07-12T08:00:00",
+      "completed_date": "2025-07-28T16:00:00"
+    },
+    {
+      "id": "act016",
+      "risk_id": "risk011",
+      "description": "Etablere daglig sikkerhetssjekk før feltarbeid",
+      "responsible": "Erik Stein",
+      "deadline": "2025-08-15",
+      "status": "Gjennomført",
+      "created": "2025-07-15T09:00:00",
+      "completed_date": "2025-08-10T08:00:00"
+    },
+    {
+      "id": "act017",
+      "risk_id": "risk012",
+      "description": "Forhandle fastpris i NOK med leverandør",
+      "responsible": "Erik Stein",
+      "deadline": "2025-08-20",
+      "status": "Gjennomført",
+      "created": "2025-07-18T10:00:00",
+      "completed_date": "2025-08-15T14:00:00"
+    },
+    {
+      "id": "act018",
+      "risk_id": "risk013",
+      "description": "Forberede presentasjon av resultater for kunde",
+      "responsible": "Erik Stein",
+      "deadline": "2026-02-01",
+      "status": "Åpen",
+      "created": "2025-08-05T09:00:00"
+    },
+    {
+      "id": "act019",
+      "risk_id": "risk014",
+      "description": "Utvikle Python-skript for labdata-import",
+      "responsible": "Gunvar",
+      "deadline": "2026-01-31",
+      "status": "Åpen",
+      "created": "2025-09-20T10:00:00"
+    },
+    {
+      "id": "act020",
+      "risk_id": "risk015",
+      "description": "Avstemme anbefalinger med administrasjonen før politisk behandling",
+      "responsible": "Maria Fjell",
+      "deadline": "2026-02-20",
+      "status": "Åpen",
+      "created": "2025-12-08T11:00:00"
+    },
+    {
+      "id": "act021",
+      "risk_id": "risk016",
+      "description": "Planlegge åpent folkemøte i januar",
+      "responsible": "Maria Fjell",
+      "deadline": "2026-01-10",
+      "status": "Åpen",
+      "created": "2025-12-12T09:00:00"
+    }
+  ],
   "users": {
     "admin": {
       "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
